@@ -7,9 +7,6 @@ import AddProduct from "../components/AddProduct.vue";
   <main>
     <div class="container">
       <ProductList/>
-
-      <br>
-      <AddProduct/>
     </div>
   </main>
 </template>

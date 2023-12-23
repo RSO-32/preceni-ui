@@ -8,6 +8,7 @@ import Search from "@/components/Search.vue";</script>
     <header>
 
       <Search/>
+      <br>
     </header>
   </div>
 

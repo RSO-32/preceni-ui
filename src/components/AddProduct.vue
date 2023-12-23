@@ -11,7 +11,7 @@ export default {
 
   methods: {
     addNew() {
-      axios.post('http://localhost:5000/products/with-barcode', {barcode: this.barcode}).then(response => {
+      axios.post('http://35.186.240.4/data/products/with-barcode', {barcode: this.barcode}).then(response => {
         this.product = response.data;
         this.$router.push({path: '/products/' + this.product.id});
       });

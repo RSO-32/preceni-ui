@@ -12,11 +12,11 @@ export default {
   methods: {
     search() {
       if (this.query) {
-        axios.get('http://localhost:5000/search/' + this.query).then(response => {
+        axios.get('http://35.186.240.4/data/search/' + this.query).then(response => {
           this.products = response.data;
         });
       } else {
-        axios.get('http://localhost:5000/products').then(response => {
+        axios.get('http://35.186.240.4/data/products').then(response => {
           this.products = response.data;
           console.log(this.products)
         });
@@ -51,8 +51,11 @@ export default {
     <div v-for="product in products" class="col">
       <div class="card">
         <div class="card-body">
+
+          <img :src="product.image_url" height="300" width="300" class="card-img-top" alt="Product image">
+          
           <router-link :to="{ path: '/products/' + product.id }">
-            <h5 class="card-title">{{ product.name + " (" + product.brand + ")"}}</h5>
+            <h5 class="card-title">{{ product.name }}</h5>
           </router-link>
           <p class="card-text">{{ displayCategories(product.categories) }}</p>
         </div>

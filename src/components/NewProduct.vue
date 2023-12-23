@@ -11,13 +11,13 @@ export default {
 
   methods: {
     getProduct() {
-      axios.get('http://localhost:5000/products/' + this.$route.params.id).then(response => {
+      axios.get('http://35.186.240.4/data/products/' + this.$route.params.id).then(response => {
         this.product = response.data;
       });
     },
 
     removeProduct() {
-      axios.delete(`http://localhost:5000/products/${this.product.id}`)
+      axios.delete(`http://35.186.240.4/data/products/${this.product.id}`)
           .then(() => {
             this.$router.push({path: '/'});
           })
