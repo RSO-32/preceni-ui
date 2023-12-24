@@ -36,13 +36,7 @@ export default {
 
         const product = response.data;
 
-        console.log(product)
-
         let records = [];
-
-        console.log(product.prices.length)
-        console.log(product.prices[0].seller)
-
         for (let i = product.prices.length - 1; i > 0; i--) {
           records.push({
             datetime: product.prices[i].datetime,

@@ -7,7 +7,6 @@ export default {
   },
   methods: {
     search() {
-      console.log("TODO: Implement search");
     },
     userLoggedIn() {
       return localStorage.getItem("user") !== null;

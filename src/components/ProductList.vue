@@ -35,9 +35,7 @@ export default {
         <div class="card-body">
           <img
             :src="product.image_url"
-            height="300"
-            width="300"
-            class="card-img-top"
+            class="card-img-top product-image"
             alt="Product image" />
 
           <router-link :to="{ path: '/products/' + product.id }">
@@ -55,5 +53,10 @@ export default {
 .price {
   font-size: 24px;
   text-align: center;
+}
+
+.product-image {
+  height: 200px;
+  object-fit: contain;
 }
 </style>

@@ -20,7 +20,6 @@ export default {
           last_name: this.last_name,
         })
         .then((response) => {
-          console.log(response);
         });
     },
   },
