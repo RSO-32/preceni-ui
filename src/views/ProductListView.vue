@@ -5,7 +5,7 @@ import ProductList from "../components/ProductList.vue";
 <template>
   <main>
     <div class="container">
-      <ProductList/>
+      <ProductList />
     </div>
   </main>
 </template>

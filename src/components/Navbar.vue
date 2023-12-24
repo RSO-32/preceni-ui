@@ -9,6 +9,16 @@ export default {
     search() {
       console.log("TODO: Implement search");
     },
+    userLoggedIn() {
+      return localStorage.getItem("user") !== null;
+    },
+    userName() {
+      return JSON.parse(localStorage.getItem("user")).first_name;
+    },
+    logout() {
+      localStorage.removeItem("user");
+      window.location.reload();
+    },
   },
 };
 </script>
@@ -38,9 +48,15 @@ export default {
             </button>
           </form>
         </div>
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto" v-if="userLoggedIn()">
+          <span class="username" @click="logout">{{ userName() }}</span>
+        </ul>
+        <ul class="navbar-nav ms-auto" v-else>
           <li class="nav-item">
-            <router-link to="/account" class="nav-link">Account</router-link>
+            <router-link to="/login" class="nav-link">Login</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/register" class="nav-link">Register</router-link>
           </li>
         </ul>
       </div>
@@ -49,6 +65,12 @@ export default {
 </template>
 
 <style scoped>
+.username {
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
 .navbar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
