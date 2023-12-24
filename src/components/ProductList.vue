@@ -10,7 +10,7 @@ export default {
   },
   methods: {
     getProducts() {
-      axios.get("http://rso.smole.org/data/products").then((response) => {
+      axios.get("https://rso.smole.org/data/products").then((response) => {
         this.products = response.data;
       });
     },
