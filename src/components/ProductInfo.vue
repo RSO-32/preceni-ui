@@ -13,14 +13,14 @@ export default {
   methods: {
     getProduct() {
       axios
-        .get("http://35.186.240.4/data/products/" + this.$route.params.id)
+        .get("http://rso.smole.org/data/products/" + this.$route.params.id)
         .then((response) => {
           this.product = response.data;
         });
     },
     narociNaObvestila() {
       axios
-        .post("http://35.186.240.4/notify/notifications", {
+        .post("http://rso.smole.org/notify/notifications", {
           product_id: this.product.id,
           price: this.mejna_cena,
           discord_webhook: this.discord_webhook,
