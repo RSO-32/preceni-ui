@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import {RouterView} from 'vue-router'
-import Search from "@/components/Search.vue";</script>
+import Navbar from "@/components/Navbar.vue";
+</script>
 
 <template>
   <div class="container">
 
     <header>
 
-      <Search/>
+      <Navbar/>
       <br>
     </header>
   </div>

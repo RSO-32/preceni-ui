@@ -8,15 +8,11 @@ const router = createRouter({
         {
             path: '/',
             name: 'home',
-            redirect: '/search',
+            component: ProductListView
         }, {
             path: '/products/:id',
             name: 'product',
             component: ProductView
-        }, {
-            path: '/search/:query?',
-            name: 'search',
-            component: ProductListView
         }
     ]
 })

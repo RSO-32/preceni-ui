@@ -18,7 +18,6 @@ export default {
       } else {
         axios.get('http://35.186.240.4/data/products').then(response => {
           this.products = response.data;
-          console.log(this.products)
         });
       }
     },
@@ -30,17 +29,6 @@ export default {
       return categoryNames.join(", ");
     }
   },
-
-  watch: {
-    $route: function () {
-      this.query = this.$route.params.query;
-      this.search();
-    }
-  },
-
-  created() {
-    this.search();
-  }
 }
 </script>
 
