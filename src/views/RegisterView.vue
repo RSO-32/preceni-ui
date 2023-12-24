@@ -13,7 +13,7 @@ export default {
   methods: {
     register() {
       axios
-        .post("https://rso.smole.org/auth/register", {
+        .post("http://rso.smole.org/auth/register", {
           email: this.email,
           password: this.password,
           first_name: this.first_name,

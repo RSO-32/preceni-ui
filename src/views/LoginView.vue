@@ -11,7 +11,7 @@ export default {
   methods: {
     login() {
       axios
-        .post("https://rso.smole.org/auth/login", {
+        .post("http://rso.smole.org/auth/login", {
           email: this.email,
           password: this.password,
         })

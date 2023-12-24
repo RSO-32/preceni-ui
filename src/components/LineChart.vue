@@ -32,7 +32,7 @@ export default {
     },
 
     getRecords() {
-      axios.get("https://rso.smole.org/data/products/" + this.$route.params.id).then(response => {
+      axios.get("http://rso.smole.org/data/products/" + this.$route.params.id).then(response => {
 
         const product = response.data;
 
